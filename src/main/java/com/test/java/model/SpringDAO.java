@@ -7,4 +7,10 @@ public class SpringDAO {
 		return 120;
 	}
 
+	public void add(AddressDTO dto) {
+		//db작업했다고 가정
+		System.out.println(dto);
+		
+	}
+
 }

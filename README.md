@@ -58,3 +58,12 @@
     - `ex05.jsp`
     - `ex05get.jsp`
     - `ex05post.jsp`
+- __6번 예제: 데이터 전송 + 수신하기(중요)__
+    - 서블릿 수업 때 하나의 컨트롤러에 get메서드 post메서드 둘다 구현하는 방식이랑 비슷
+  - com.test.java.controller
+    - `Ex06Controller.java`
+  - com.test.java.model
+    - `AddressDTO.java`
+  - views
+    - `ex06.jsp`
+    - `ex06ok.jsp`
