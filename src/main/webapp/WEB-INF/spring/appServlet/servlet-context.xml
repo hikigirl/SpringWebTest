@@ -16,13 +16,37 @@
 	<resources mapping="/resources/**" location="/resources/" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<!-- 
+		ViewResolver
+		- 컨트롤러가 뷰를 호출하는 시점에 개입
+		- 경로에 접두/접미어를 붙여준다.
+	 -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<!-- setter 2개(setPrefix, setSuffix) -->
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
 	<context:component-scan base-package="com.test.java" />
 	
+	
+	<!-- 컨트롤러를 스프링 빈으로 등록하기 -->
+	<beans:bean class="com.test.java.controller.Ex01Controller" 
+				 name="/ex01.do" />
+	<!-- 
+		이름이 겹칠 시
+		Configuration problem: Bean name '/ex01.do' is already used in this <beans> element
+	 -->
+	<!-- <beans:bean class="com.test.java.controller.Ex02Controller" 
+						name="/ex02.do"/> -->
+		
+		<!-- 생성자 매개변수 자리에 넣기 위해 dao도 bean으로 만듬 -->
+		<beans:bean class="com.test.java.model.SpringDAO" id="dao"/>
+		
+		<beans:bean class="com.test.java.controller.Ex02Controller" 
+		name="/ex02.do"> 
+			<beans:constructor-arg ref="dao" />
+		</beans:bean>
 	
 	
 </beans:beans>
