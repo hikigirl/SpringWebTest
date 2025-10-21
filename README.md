@@ -67,3 +67,12 @@
   - views
     - `ex06.jsp`
     - `ex06ok.jsp`
+- 7번 예제: 요청 메서드의 반환값
+    - 서블릿 수업 때 하나의 컨트롤러에 get메서드 post메서드 둘다 구현하는 방식이랑 비슷
+  - com.test.java.controller
+    - `Ex07Controller.java` : 브라우저용
+    - `Ex07RestController.java` : Ajax 처리용(json 처리 관련)
+  - com.test.java.model
+    - `Student.java`
+  - views
+    - `ex07.jsp`
