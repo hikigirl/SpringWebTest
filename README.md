@@ -76,3 +76,12 @@
     - `Student.java`
   - views
     - `ex07.jsp`
+- 8번 예제: 의존 주입 + 어노테이션 방식
+  - com.test.java.controller
+    - `Ex08Controller.java`: 사장 역할
+  - com.test.java.service
+    - `SpringService.java`: 팀장 역할
+  - com.test.java.model
+    - `SpringDAO.java`: 팀원 역할
+  - views
+    - `ex08.jsp`
